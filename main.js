@@ -37,7 +37,7 @@ request(dronesSettings, function (error, response, dronesString) {
             dal.insertDrone(new Drone(drone.id, drone.name, drone.mac_address));
 
             console.log("***************************************************************************");
-            //dingen aanpassen
+            //dingen aanpassen om files in te laden.. so it begins
             var droneSettings = new Settings("/drones/" + drone.id + "?format=json");
             request(droneSettings, function (error, response, droneString) {
                 var drone = JSON.parse(droneString);
